@@ -18,9 +18,9 @@ function Usercard({
   id: string;
   email: string;
 }) {
-  const [changeDetected, setChange] = useState<boolean>(false);
   const [notification, setNotification] = useState<number>(0);
   const loggedUser = useSelector((state: RootState) => state.user);
+  const receiver = useSelector((state:RootState)=>state.receiver)
   const dispatch = useDispatch();
   const setReciever = () => {
     dispatch(set(id));
@@ -59,7 +59,7 @@ function Usercard({
 
   useEffect(() => {
     checkMessages();
-  }, []);
+  }, [receiver.id]);
   return (
     <>
       <div
