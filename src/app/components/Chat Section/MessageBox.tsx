@@ -41,21 +41,7 @@ function MessageBox({
       console.log(res);
     }
   };
-  supabase
-    .channel("Realtime-Messages-Update-Event")
-    .on(
-      "postgres_changes",
-      {
-        event: "*",
-        schema: "public",
-        table: "messages",
-      },
-      (payload) => {
-        updateStatus();
-        // router.refresh()
-      }
-    )
-    .subscribe();
+  
   useEffect(() => {
     updateStatus();
   }, []);

@@ -108,7 +108,7 @@ function Userbar({ all }: { all: boolean }) {
     .on(
       "postgres_changes",
       {
-        event: "INSERT",
+        event: "*",
         schema: "public",
         table: "messages",
       },
