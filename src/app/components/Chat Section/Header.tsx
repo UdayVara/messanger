@@ -33,7 +33,7 @@ function Header() {
   useEffect(()=>{
     getUser()
   },[receiver])
-  console.log(user);
+  // console.log(user);
   
   return (
     <>

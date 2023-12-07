@@ -28,7 +28,7 @@ function MessageBox({
 
   const updateStatus = async () => {
     if (is_seen===false && sender !== currentUser) {
-      console.log(is_seen,sender,message,currentUser,id);
+      // console.log(is_seen,sender,message,currentUser,id);
       
       const res = await supabase
         .from("messages")
@@ -38,7 +38,7 @@ function MessageBox({
       if (res.error) {
         toast.error(res.error.message);
       }
-      console.log(res);
+      // console.log(res);
     }
   };
   

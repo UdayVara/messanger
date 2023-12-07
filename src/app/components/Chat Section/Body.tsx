@@ -34,7 +34,7 @@ function Body() {
       toast.error(msgs.error.message);
     } else {
       setMessages(msgs.data);
-      console.log(msgs.data);
+      // console.log(msgs.data);
       setTimeout(() => {
         window.document
           .getElementById("chatbox")
@@ -57,7 +57,7 @@ function Body() {
       },
       (payload) => {
         getMessages();
-        router.refresh();
+        // router.refresh();
       }
     )
     .subscribe();

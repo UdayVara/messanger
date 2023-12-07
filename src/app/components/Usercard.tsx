@@ -35,7 +35,7 @@ function Usercard({
         toast.error(error.message);
       }
       if (data) {
-        console.log(data.length);
+        // console.log(data.length);
         setNotification(data.length);
       }
     }
@@ -50,8 +50,8 @@ function Usercard({
         table: "messages",
       },
       (payload) => {
-        console.log("Message incoming");
-        console.log(payload);
+        // console.log("Message incoming");
+        // console.log(payload);
         checkMessages()
       }
     )

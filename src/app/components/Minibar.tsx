@@ -15,7 +15,7 @@ import { useTheme } from 'next-themes'
 function Minibar() {
   const pathname = usePathname();
   const router = useRouter();
-  console.log(pathname);
+  // console.log(pathname);
   const handleLogout = async () => {
     const result = await supabase.auth.signOut();
 
