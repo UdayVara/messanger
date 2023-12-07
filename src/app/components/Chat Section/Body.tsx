@@ -45,6 +45,7 @@ function Body() {
       }, 200);
     }
   };
+  
   supabase
     .channel("Realtime-messages-for-body")
     .on(
@@ -56,7 +57,7 @@ function Body() {
       },
       (payload) => {
         getMessages();
-        // router.refresh();
+        router.refresh();
       }
     )
     .subscribe();

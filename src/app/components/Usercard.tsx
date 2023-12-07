@@ -41,7 +41,7 @@ function Usercard({
     }
   };
   supabase
-    .channel("Realtime-messages-for-notification-all")
+    .channel("Realtime-messages-for-notification")
     .on(
       "postgres_changes",
       {
@@ -53,14 +53,13 @@ function Usercard({
         console.log("Message incoming");
         console.log(payload);
         checkMessages()
-        setChange(!changeDetected)
       }
     )
     .subscribe();
 
   useEffect(() => {
     checkMessages();
-  }, [changeDetected]);
+  }, []);
   return (
     <>
       <div
